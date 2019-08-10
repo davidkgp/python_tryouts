@@ -38,3 +38,13 @@ for i in range(1, 10):
     print(i)
 else:
     print("this is not printed because for loop is terminated because of break but not due to fail in condition")
+
+
+my_tuple_list=[(1,2,3),(4,5,6),(7,8,9)]
+for tuple in my_tuple_list:
+    print(tuple)
+
+#tuple unpacking
+for (a,b,c) in my_tuple_list:
+    print(a)
+    print(b)
