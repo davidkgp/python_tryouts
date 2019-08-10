@@ -12,3 +12,4 @@ print(new_even_list)
 list_same=[10,100]
 combine_add = [x+y for x in list for y in list_same]
 print(combine_add)
+
