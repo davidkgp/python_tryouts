@@ -48,3 +48,28 @@ for tuple in my_tuple_list:
 for (a,b,c) in my_tuple_list:
     print(a)
     print(b)
+
+#tuple handling for loops
+simeple_tuple=(100,2,3,4,5,6,7,8)
+for x in simeple_tuple:
+    print(x)
+
+#tuple handling for loops slice objects (which are created implicitly when you do a[:]) take 3 arguments -- start,stop,stride
+print("every 2nd element")
+for x in simeple_tuple[::2]:
+    print(x)
+
+#in dictionary
+dict_my={"some1":2,"other2":3,"other4":4,"other5":5,"other6":6}
+
+# default iteration over keys
+for x in dict_my:
+    print(x)
+
+#iteration over values
+
+for x in dict_my.values():
+    print(x)
+# iteration over items (key value pair)
+for x in dict_my.items():
+    print(x)
