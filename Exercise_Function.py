@@ -33,7 +33,29 @@ print(lesser_of_two_evens(10,12))
 
 #Write a function takes a two-word string and returns True if both words begin with same letter
 def animal_crackers(str):
+    first_set=set()
     for x in str.split():
-        print(x)
+        first_set.add(x[0].lower())
 
-animal_crackers("hi there")
+    if len(first_set) ==1 :
+        return True
+    else:
+        return False
+
+
+
+print(animal_crackers("hi there"))
+
+print(animal_crackers("hi here"))
+print(animal_crackers("hi Here"))
+
+def makes_twenty(x,y):
+    if (x==20 or y==20) or (x+y==20):
+        return True
+    else:
+        return False
+
+print(makes_twenty(20,10))
+print(makes_twenty(12,8))
+print(makes_twenty(2,3))
+
