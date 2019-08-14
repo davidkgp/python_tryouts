@@ -59,3 +59,47 @@ print(makes_twenty(20,10))
 print(makes_twenty(12,8))
 print(makes_twenty(2,3))
 
+def old_macdonald(name):
+    return name[:3:].capitalize()+name[3::].capitalize()
+
+
+print(old_macdonald("Sango"))
+print(old_macdonald("macdonald"))
+
+def master_yoda(text):
+    return " ".join(reversed([x for x in text.split()]))
+
+print(master_yoda("Sango but"))
+print(master_yoda("I am home"))
+
+
+def almost_there(n):
+    if (n<=110 and n>=90) or (n<=210 and n>=190):
+        return True
+    else:
+        return False
+
+print(almost_there(90)) #--> True
+print(almost_there(104)) #--> True
+print(almost_there(150)) #--> False
+print(almost_there(209)) #--> True
+
+def has_33(list):
+    pivot=0
+    for x in list:
+
+        if pivot ==3 and x ==3:
+            return True
+        else:
+            pivot=0
+        pivot = x
+
+    return False
+
+print(has_33([1, 3, 3])) #→ True
+print(has_33([1, 3, 1, 3])) #→ False
+print(has_33([3, 1, 3])) #→ False
+print(has_33([3, 1, 3,5,6,9,3,8,3])) #→ False
+
+
+
