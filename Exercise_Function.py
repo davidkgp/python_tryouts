@@ -15,15 +15,10 @@ def less(x,y):
 
 def lesser_of_two_evens(x,y):
     if even(x) and even(y):
-        if x > y:
-            return y
-        else:
-            return x
+        return min(x,y)
+
     else:
-        if y > x:
-            return y
-        else:
-            return x
+        return max(x,y)
 
 print(lesser_of_two_evens(2,5))
 print(lesser_of_two_evens(2,4))
@@ -43,6 +38,10 @@ def animal_crackers(str):
         return False
 
 
+def animal_crackers_alter(text):
+    wordlist = text.split()
+    return wordlist[0][0] == wordlist[1][0]
+
 
 print(animal_crackers("hi there"))
 
@@ -50,10 +49,8 @@ print(animal_crackers("hi here"))
 print(animal_crackers("hi Here"))
 
 def makes_twenty(x,y):
-    if (x==20 or y==20) or (x+y==20):
-        return True
-    else:
-        return False
+    return (x==20 or y==20) or (x+y==20)
+
 
 print(makes_twenty(20,10))
 print(makes_twenty(12,8))
@@ -82,15 +79,14 @@ print(almost_there(150)) #--> False
 print(almost_there(209)) #--> True
 print("almost there")
 
-def has_33(list):
-    pivot=0
-    for x in list:
+def has_33(nums):
+    for i in range(0, len(nums) - 1):
 
-        if pivot ==3 and x ==3:
+        # nicer looking alternative in commented code
+        # if nums[i] == 3 and nums[i+1] == 3:
+
+        if nums[i:i + 2] == [3, 3]:
             return True
-        else:
-            pivot=0
-        pivot = x
 
     return False
 
