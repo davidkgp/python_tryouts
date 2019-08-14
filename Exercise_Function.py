@@ -72,17 +72,15 @@ def master_yoda(text):
 print(master_yoda("Sango but"))
 print(master_yoda("I am home"))
 
-
+print("almost there")
 def almost_there(n):
-    if (n<=110 and n>=90) or (n<=210 and n>=190):
-        return True
-    else:
-        return False
+    return (n<=110 and n>=90) or (n<=210 and n>=190)
 
 print(almost_there(90)) #--> True
 print(almost_there(104)) #--> True
 print(almost_there(150)) #--> False
 print(almost_there(209)) #--> True
+print("almost there")
 
 def has_33(list):
     pivot=0
@@ -101,5 +99,57 @@ print(has_33([1, 3, 1, 3])) #→ False
 print(has_33([3, 1, 3])) #→ False
 print(has_33([3, 1, 3,5,6,9,3,8,3])) #→ False
 
+def paper_doll(str):
+    list=[1,2,3]
+    return "".join([x for x in str for y in list])
 
+print(paper_doll("Hello"))
+print(paper_doll('Mississippi'))
+
+def sum1(a,b,c):
+    return a+b+c
+
+def blackjack(a,b,c):
+    if sum1(a,b,c) <= 21:
+        return sum1(a,b,c)
+    elif sum1(a,b,c) > 21:
+        if a==11 or b==11 or c==11:
+            val=sum1(a,b,c)-10
+            if val > 21:
+                return "BUST"
+            else:
+                return val
+        else:
+            return "BUST"
+
+
+print(blackjack(5,6,7)) #--> 18
+print(blackjack(9,9,9)) #--> 'BUST'
+print(blackjack(9,9,11)) #--> 19
+
+def summer_69(arr):
+    if 6 in arr and 9 in arr:
+        return sum(arr[:arr.index(6):])+sum(arr[arr.index(9)+1::])
+    else:
+        return sum(arr)
+
+
+print(summer_69([1, 3, 5])) #--> 9
+print(summer_69([4, 5, 6, 7, 8, 9])) #--> 9
+print(summer_69([2, 1, 6, 9, 11])) #--> 14
+print(summer_69([])) #--> 0
+print(summer_69([6,8,9])) #--> 0
+print(summer_69([6,9])) #--> 0
+
+
+
+def spy_game(nums):
+    list007=[str(x) for x in nums if x==0 or x ==7]
+    val="".join(list007)
+    return val=="007"
+
+
+print(spy_game([1,2,4,0,0,7,5])) #--> True
+print(spy_game([1,0,2,4,0,5,7])) #--> True
+print(spy_game([1,7,2,0,4,5,0])) #--> False
 
